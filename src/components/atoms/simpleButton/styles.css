@@ -1,0 +1,44 @@
+.simple-button{
+    background-color: #4da4f6;
+    font-family: Roboto, sans-serif;
+    padding: 10px;   
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.simple-button .ripple-effect{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: #000;
+    opacity: 0;
+    border-radius: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: opacity .2s ease-out, transform 1ms ease .2s;
+    z-index: 1;
+}
+
+.simple-button__text{
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.simple-button:active .ripple-effect{
+    opacity: 0.08;
+    transition: transform 1s ease-out;
+    transform: translate(-50%,-50%) scale(10);
+}
+
+.simple-button:hover{
+    background-color: #4da4f6;
+}

@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "module":"commonjs",
+        "target": "es6",
+        "noEmitOnError": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitUseStrict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true
+    }
+}
