@@ -1,11 +1,12 @@
 import { SimpleButton } from "../../components/atoms/simpleButton/simpleButton";
+import { PhoneForm } from "../../components/organisms/phoneForm/phoneForm";
 
 export class LoginScreen {
-    render(){
+    render() {
         return `
 <div>
      <h1>Hello</h1>
-     ${(new SimpleButton).render()}
+     ${PhoneForm.render()}
 </div>
         `;
     }

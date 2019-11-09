@@ -1,0 +1,21 @@
+.simple-dropdown{
+    background: transparent;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.simple-dropdown__tick{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.simple-dropdown__options{
+    display: none;
+}

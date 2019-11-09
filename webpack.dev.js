@@ -3,12 +3,35 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    entry: path.resolve(__dirname__,'src/index.ts'),
+    mode: "development",
+    devtool: "source-map",
+    entry: path.resolve('src/client/index.ts'),
     output: {
-        path: path.resolve('dist')
+        path: path.resolve('public/j'),
+        filename: "[name].[contenthash].js",
+        publicPath: '/public/j'
     },
     module: {
         rules: [
+            {
+                test: /\.json$/i,
+                use: [
+                    'raw-loader'
+                ]
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
+            {
+                test: /\.svg$/,
+                use: [
+                    'file-loader'
+                ]
+            },
             {
                 test: /\.ts?$/,
                 use: [
@@ -22,7 +45,7 @@ module.exports = {
                             ],
                             plugins: [
                                 "@babel/plugin-syntax-dynamic-import",
-                                "@babel/plugin-transform-class-properties",
+                                "@babel/plugin-proposal-class-properties",
                                 "@babel/plugin-proposal-optional-chaining"
                             ]
                         },
@@ -32,11 +55,16 @@ module.exports = {
             }
         ]
     },
+    resolve: {
+        extensions: [
+            '.js', '.ts', '.json', '.css'
+        ]
+    },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: 'src/views/dev.html',
+            filename: '../index.html',
+            template: 'src/index.html',
             inject: 'body'
-          }),
+        }),
     ]
 }

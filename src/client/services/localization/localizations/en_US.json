@@ -1,0 +1,7 @@
+{
+    "login_screen.sign_to_tlg": "Sign in to Telegram",
+    "login_screen.please_confirm": "Please confirm your country and enter your phone number",
+    "login_screen.country_placeholder": "Country",
+    "login_screen.phone_placeholder": "Phone Number",
+    "login_screen.keep_signed_in": "Keep me signed in"
+}

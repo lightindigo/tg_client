@@ -1,0 +1,10 @@
+.simple-input{
+    background: transparent;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+}

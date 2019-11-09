@@ -1,2 +1,5 @@
 node_modules
 .vscode
+built
+/public
+/babel_cache

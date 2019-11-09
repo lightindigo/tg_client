@@ -1,8 +1,11 @@
 {
     "compilerOptions": {
-        "module":"commonjs",
-        "target": "es6",
+        "module": "commonjs",
+        "target": "es2017",
+        "esModuleInterop": false,
+        "allowSyntheticDefaultImports": true,
         "noEmitOnError": true,
+        "resolveJsonModule": true,
         "noImplicitAny": true,
         "noImplicitReturns": true,
         "noImplicitUseStrict": true,
